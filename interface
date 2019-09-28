@@ -1,0 +1,200 @@
+from Tkinter import *
+
+root = Tk()
+root.title("who's Sadie?")
+root.geometry("500x400")
+root.resizable(False, False)
+user_input = 0
+
+# frames
+cogs = Frame(root)
+gags = Frame(root, pady=10)
+
+# layout frames
+cogs.grid(row=0)
+gags.grid(row=1)
+
+# widgets for Cogs
+cog1 = Label(cogs, text="Cog 1")
+cog2 = Label(cogs, text="Cog 2")
+cog3 = Label(cogs, text="Cog 3")
+cog4 = Label(cogs, text="Cog 4")
+reset1 = Button(cogs, text="Reset")
+reset2 = Button(cogs, text="Reset")
+reset3 = Button(cogs, text="Reset")
+reset4 = Button(cogs, text="Reset")
+
+cog1click = StringVar()
+cog1click.set("Insert cog 1 level")
+cog2click = StringVar()
+cog2click.set("Insert cog 2 level")
+cog3click = StringVar()
+cog3click.set("Insert cog 3 level")
+cog4click = StringVar()
+cog4click.set("Insert cog 4 level")
+
+def on_click(event):
+    event.widget.delete(0, END)
+
+c1entry = Entry(cogs, textvariable=cog1click, justify=CENTER)
+c1entry.bind("<FocusIn>", on_click)
+c2entry = Entry(cogs, textvariable=cog2click, justify=CENTER)
+c2entry.bind("<FocusIn>", on_click)
+c3entry = Entry(cogs, textvariable=cog3click, justify=CENTER)
+c3entry.bind("<FocusIn>", on_click)
+c4entry = Entry(cogs, textvariable=cog4click, justify=CENTER)
+c4entry.bind("<FocusIn>", on_click)
+
+hpdict = {'1': '6', '2': '12'}
+
+
+# I was working on getting the labels below to display the cog HP based on the level put into the entries above
+# I've since deleted all my nonsense that didn't work but StringVars and textvariables are things I was trying to use
+# combined with the partial dictionary 'hpdict'
+# I don't know. -massive shrug-
+
+# I read somewhere that keeping things seperate (esp .grid and .pack stuff) prevented weird errors when I was figuring out how to use frames
+# So this is all spaced out and probably not conducive to actually making the damn buttons work lol
+# ~~what even are indentations I have no idea~~
+
+
+hp1 = Label(cogs)
+hp2 = Label(cogs)
+hp3 = Label(cogs)
+hp4 = Label(cogs)
+
+
+
+# layout for Cogs
+cog1.grid(column=0, row=0)
+cog2.grid(column=1, row=0)
+cog3.grid(column=2, row=0)
+cog4.grid(column=3, row=0)
+reset1.grid(column=0, row=1)
+reset2.grid(column=1, row=1)
+reset3.grid(column=2, row=1)
+reset4.grid(column=3, row=1)
+c1entry.grid(column=0, row=2)
+c2entry.grid(column=1, row=2)
+c3entry.grid(column=2, row=2)
+c4entry.grid(column=3, row=2)
+hp1.grid(column=0, row=3)
+hp2.grid(column=1, row=3)
+hp3.grid(column=2, row=3)
+hp4.grid(column=3, row=3)
+
+# widgets for Gags
+banana = PhotoImage(file = "C:/Users/Eien/Desktop/Calc/resources/images/banana.ppm")
+rake = PhotoImage(file = "C:/Users/Eien/Desktop/Calc/resources/images/rake.ppm")
+marbles = PhotoImage(file = "C:/Users/Eien/Desktop/Calc/resources/images/marbles.ppm")
+sand = PhotoImage(file = "C:/Users/Eien/Desktop/Calc/resources/images/sand.ppm")
+door = PhotoImage(file = "C:/Users/Eien/Desktop/Calc/resources/images/door.ppm")
+tnt = PhotoImage(file = "C:/Users/Eien/Desktop/Calc/resources/images/tnt.ppm")
+train = PhotoImage(file = "C:/Users/Eien/Desktop/Calc/resources/images/train.ppm")
+bike = PhotoImage(file = "C:/Users/Eien/Desktop/Calc/resources/images/bike.ppm")
+whistle = PhotoImage(file = "C:/Users/Eien/Desktop/Calc/resources/images/whistle.ppm")
+bugle = PhotoImage(file = "C:/Users/Eien/Desktop/Calc/resources/images/bugle.ppm")
+aoogah = PhotoImage(file = "C:/Users/Eien/Desktop/Calc/resources/images/aoogah.ppm")
+trunk = PhotoImage(file = "C:/Users/Eien/Desktop/Calc/resources/images/trunk.ppm")
+fog = PhotoImage(file = "C:/Users/Eien/Desktop/Calc/resources/images/fog.ppm")
+opera = PhotoImage(file = "C:/Users/Eien/Desktop/Calc/resources/images/opera.ppm")
+cupcake = PhotoImage(file = "C:/Users/Eien/Desktop/Calc/resources/images/cupcake.ppm")
+fruitslice = PhotoImage(file = "C:/Users/Eien/Desktop/Calc/resources/images/fruitslice.ppm")
+creamslice = PhotoImage(file = "C:/Users/Eien/Desktop/Calc/resources/images/creamslice.ppm")
+fruit = PhotoImage(file = "C:/Users/Eien/Desktop/Calc/resources/images/fruit.ppm")
+cream = PhotoImage(file = "C:/Users/Eien/Desktop/Calc/resources/images/cream.ppm")
+cake = PhotoImage(file = "C:/Users/Eien/Desktop/Calc/resources/images/cake.ppm")
+wedding = PhotoImage(file = "C:/Users/Eien/Desktop/Calc/resources/images/wedding.ppm")
+squirt = PhotoImage(file = "C:/Users/Eien/Desktop/Calc/resources/images/squirt.ppm")
+water = PhotoImage(file = "C:/Users/Eien/Desktop/Calc/resources/images/water.ppm")
+gun = PhotoImage(file = "C:/Users/Eien/Desktop/Calc/resources/images/gun.ppm")
+seltzer = PhotoImage(file = "C:/Users/Eien/Desktop/Calc/resources/images/seltzer.ppm")
+hose = PhotoImage(file = "C:/Users/Eien/Desktop/Calc/resources/images/hose.ppm")
+cloud = PhotoImage(file = "C:/Users/Eien/Desktop/Calc/resources/images/cloud.ppm")
+geyser = PhotoImage(file = "C:/Users/Eien/Desktop/Calc/resources/images/geyser.ppm")
+flowerpot = PhotoImage(file = "C:/Users/Eien/Desktop/Calc/resources/images/flowerpot.ppm")
+bag = PhotoImage(file = "C:/Users/Eien/Desktop/Calc/resources/images/bag.ppm")
+anvil = PhotoImage(file = "C:/Users/Eien/Desktop/Calc/resources/images/anvil.ppm")
+weight = PhotoImage(file = "C:/Users/Eien/Desktop/Calc/resources/images/weight.ppm")
+safe = PhotoImage(file = "C:/Users/Eien/Desktop/Calc/resources/images/safe.ppm")
+piano = PhotoImage(file = "C:/Users/Eien/Desktop/Calc/resources/images/piano.ppm")
+boat = PhotoImage(file = "C:/Users/Eien/Desktop/Calc/resources/images/boat.ppm")
+
+bananaB = Button(gags, image = banana)
+rakeB = Button(gags, image = rake)
+marblesB = Button(gags, image = marbles)
+sandB = Button(gags, image = sand)
+doorB = Button(gags, image = door)
+tntB = Button(gags, image = tnt)
+trainB = Button(gags, image = train)
+bikeB = Button(gags, image = bike)
+whistleB = Button(gags, image = whistle)
+bugleB = Button(gags, image = bugle)
+aoogahB = Button(gags, image = aoogah)
+trunkB = Button(gags, image = trunk)
+fogB = Button(gags, image = fog)
+operaB = Button(gags, image = opera)
+cupcakeB = Button(gags, image = cupcake)
+fruitsliceB = Button(gags, image = fruitslice)
+creamsliceB = Button(gags, image = creamslice)
+fruitB = Button(gags, image = fruit)
+creamB = Button(gags, image = cream)
+cakeB = Button(gags, image = cake)
+weddingB = Button(gags, image = wedding)
+squirtB = Button(gags, image = squirt)
+waterB = Button(gags, image = water)
+gunB = Button(gags, image = gun)
+seltzerB = Button(gags, image = seltzer)
+hoseB = Button(gags, image = hose)
+cloudB = Button(gags, image = cloud)
+geyserB = Button(gags, image = geyser)
+flowerpotB = Button(gags, image = flowerpot)
+bagB = Button(gags, image = bag)
+anvilB = Button(gags, image = anvil)
+weightB = Button(gags, image = weight)
+safeB = Button(gags, image = safe)
+pianoB = Button(gags, image = piano)
+boatB = Button(gags, image = boat)
+
+# layout Gags
+bananaB.grid(column=0, row=0)
+rakeB.grid(column=1, row=0)
+marblesB.grid(column=2, row=0)
+sandB.grid(column=3, row=0)
+doorB.grid(column=4, row=0)
+tntB.grid(column=5, row=0)
+trainB.grid(column=6, row=0)
+
+bikeB.grid(column=0, row=1)
+whistleB.grid(column=1, row=1)
+bugleB.grid(column=2, row=1)
+aoogahB.grid(column=3, row=1)
+trunkB.grid(column=4, row=1)
+fogB.grid(column=5, row=1)
+operaB.grid(column=6, row=1)
+
+cupcakeB.grid(column=0, row=2)
+fruitsliceB.grid(column=1, row=2)
+creamsliceB.grid(column=2, row=2)
+fruitB.grid(column=3, row=2)
+creamB.grid(column=4, row=2)
+cakeB.grid(column=5, row=2)
+weddingB.grid(column=6, row=2)
+
+squirtB.grid(column=0, row=3)
+waterB.grid(column=1, row=3)
+gunB.grid(column=2, row=3)
+seltzerB.grid(column=3, row=3)
+hoseB.grid(column=4, row=3)
+cloudB.grid(column=5, row=3)
+geyserB.grid(column=6, row=3)
+
+flowerpotB.grid(column=0, row=4)
+bagB.grid(column=1, row=4)
+anvilB.grid(column=2, row=4)
+weightB.grid(column=3, row=4)
+safeB.grid(column=4, row=4)
+pianoB.grid(column=5, row=4)
+boatB.grid(column=6, row=4)
+
+root.mainloop()
